@@ -21,4 +21,9 @@ public class BounceWallLeft : MonoBehaviour
     {
         other.gameObject.GetComponent<Rigidbody>().AddForce(pushRight * 200);
     }
+
+    void OnColliderEnter(Collision other)
+    {
+        gameObject.GetComponent<Rigidbody>().AddForce(pushRight * 200);
+    }
 }
